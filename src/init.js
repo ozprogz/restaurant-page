@@ -1,5 +1,3 @@
-import restaurant from "./images/restaurant.jpg";
-
 export const loadInitPage = () => {
   renderContent();
 };
@@ -9,17 +7,25 @@ export const renderInit = () => {
   const header = document.createElement("header");
   const footer = document.createElement("footer");
   footer.innerHTML = `Made by Zaro`;
-  header.innerHTML = `<a href ="http://localhost:8080/#home" class="header">Guilty Pleasures</a>
+  header.innerHTML = `<a class="header">Guilty Pleasures</a>
         <nav> 
             <ul>
-                <li><a href="/#home">Home</a></li>
-                <li><a href="/#menu">Menu</a></li>
-                <li><a href="/#about">About</a></li>
-                <li><a href="/#contact">Contact</a></li>
+                <li><a>Home</a></li>
+                <li><a>Menu</a></li>
+                <li><a>About</a></li>
+                <li><a>Contact</a></li>
             </ul>
         </nav>`;
   body.prepend(header);
   body.append(footer);
+
+  const routes = ["#home", "#home", "#menu", "#about", "#contact"];
+  const routing = document.querySelectorAll("a");
+  routing.forEach((link, i) => {
+    link.addEventListener("click", () => {
+      window.location.hash = routes[i];
+    });
+  });
 };
 
 const renderContent = () => {
