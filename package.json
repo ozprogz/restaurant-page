@@ -1,0 +1,29 @@
+{
+  "name": "restaurant-page",
+  "version": "1.0.0",
+  "description": "guilty pleasure's website",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "webpack serve --open",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ozprogz/restaurant-page.git"
+  },
+  "author": "zaro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ozprogz/restaurant-page/issues"
+  },
+  "homepage": "https://github.com/ozprogz/restaurant-page#readme",
+  "devDependencies": {
+    "css-loader": "^6.7.3",
+    "html-loader": "^4.2.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  }
+}
